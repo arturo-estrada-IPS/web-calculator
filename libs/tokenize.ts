@@ -1,4 +1,4 @@
-import { tokenTypes, Token } from "./types";
+import { tokenTypes, Token } from "./types/types";
 import {
   isComma,
   isDecimal,

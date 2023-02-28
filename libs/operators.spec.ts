@@ -80,6 +80,17 @@ describe("operators: a set of function to perform the basic mathematical operati
         expect(output).toBe(expectedOutput);
       });
     });
+
+    describe("invalid function", () => {
+      it("should throw error if no function is found", () => {
+        try {
+          const input = Math.PI;
+          trig("sda", input);
+        } catch (e) {
+          expect((e as any).message).toBe("function not found");
+        }
+      });
+    });
   });
 
   describe("other functions", () => {

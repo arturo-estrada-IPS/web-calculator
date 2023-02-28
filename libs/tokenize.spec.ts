@@ -165,6 +165,17 @@ describe("tokenize lib: convert math operation to set of tokens", () => {
       expect(result).toHaveLength(expectedResult.length);
       expect(result).toEqual(expectedResult);
     });
+
+    it("should tokenize with square root expressions", () => {
+      const input = "sqrt(3-2)";
+      const expectedResult = ["sqrt", "(", "3", "-", "2", ")"];
+      const tokens = tokenize(input);
+      const result = tokensToArray(tokens);
+
+      expect(tokens).toHaveLength(result.length);
+      expect(result).toHaveLength(expectedResult.length);
+      expect(result).toEqual(expectedResult);
+    });
   });
 
   describe("pi and e as numbers", () => {

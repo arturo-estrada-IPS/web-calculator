@@ -26,3 +26,12 @@ export enum Operators {
   LEFT_PARENTHESIS = "(",
   RIGHT_PARENTHESIS = ")",
 }
+
+export enum Functions {
+  SIN = "sin",
+  COS = "cos",
+  TAN = "tan",
+  SQRT = "sqrt",
+  MIN = "min",
+  MAX = "max",
+}

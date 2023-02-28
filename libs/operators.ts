@@ -32,9 +32,9 @@ export function sqrt(a: number) {
 
 export function trig(name: string, value: number) {
   const trigonometry: { [key: string]: (v: number) => number } = {
-    sin: (n) => Math.sin(n),
-    cos: (n) => Math.cos(n),
-    tan: (n) => Math.tan(n),
+    sin: (n) => +Math.sin(n).toFixed(12),
+    cos: (n) => +Math.cos(n).toFixed(12),
+    tan: (n) => +Math.tan(n).toFixed(12),
   };
 
   if (trigonometry[name]) {

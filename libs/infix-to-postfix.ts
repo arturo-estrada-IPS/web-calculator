@@ -1,4 +1,4 @@
-import { Operator, operator, Operators, Token } from "./types";
+import { Operator, operator, Operators, Token } from "./types/types";
 import { isMathFunction } from "./utils";
 
 /**

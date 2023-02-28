@@ -90,6 +90,15 @@ describe("infixToPostix: turn a tokenized expression into a RPN set of tokens", 
 
       expect(output).toEqual(expectedOutput);
     });
+
+    it("should convert to RPN with input: sqrt(2 - 3)", () => {
+      const input = "sqrt(2 - 3)";
+      const expectedOutput = ["2", "3", "-", "sqrt"];
+      const tokens = tokenize(input);
+      const output = infixToPostfix(tokens);
+
+      expect(output).toEqual(expectedOutput);
+    });
   });
 
   describe("mismatched parenthesis", () => {
