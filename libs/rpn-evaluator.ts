@@ -134,7 +134,6 @@ export function evalRpnExpression(rpn: string[]) {
 
   // IF stack has less than 1 or more than one elements the expression is invalid
   if (stack.length !== 1) {
-    console.warn(stack);
     throw new Error("invalid expression");
   }
 

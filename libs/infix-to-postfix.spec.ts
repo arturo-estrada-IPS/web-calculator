@@ -99,6 +99,15 @@ describe("infixToPostix: turn a tokenized expression into a RPN set of tokens", 
 
       expect(output).toEqual(expectedOutput);
     });
+
+    it("should convert to rpn with input: cos(pi) / (3-2)", () => {
+      const input = "cos(pi) / (3-2)";
+      const expectedOutput = ["pi", "cos", "3", "2", "-", "/"];
+      const tokens = tokenize(input);
+      const output = infixToPostfix(tokens);
+
+      expect(output).toEqual(expectedOutput);
+    });
   });
 
   describe("mismatched parenthesis", () => {
